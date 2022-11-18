@@ -1,0 +1,16 @@
+################### Desbloquear Bitlocker ###############
+
+sudo mkdir /media/bitlocker
+sudo mkdir /media/conteudo
+sudo dislocker -V /dev/sdb1 -u -- /media/bitlocker/
+
+INFORMAR SENHA BITLOCKER
+
+################## Acessar Conteúdo ################
+
+sudo mount -o loop /media/bitlocker/dislocker-file /media/conteudo/
+
+################ Desmontar Diretório ###############
+
+sudo umount /media/conteudo 
+sudo umount /media/bitlocker
