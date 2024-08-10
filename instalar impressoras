@@ -1,9 +1,0 @@
-/*Impressora*/
-
-sudo apt install cups system-config-printer printer-driver-escpr openprinting-ppds printer-driver-gutenprint
-
-sudo apt install skanlite sane-utils
-sudo adduser $USER scanner
-sudo adduser $USER lpadmin
-sudo adduser $USER saned
-
