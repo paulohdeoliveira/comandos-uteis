@@ -1,0 +1,17 @@
+#### Static IP
+
+sudo nmcli c show
+sudo nmcli c mod <connection name> ipv4.addresses aa.dd.rr.es/24 ipv4.method manual
+sudo nmcli con mod <connection name> ipv4.gateway aa.dd.rr.es/24
+sudo nmcli con mod <connection name> ipv4.dns aa.dd.rr.es/24
+sudo nmcli c down <connection name> && sudo cmcli c up <connection name>
+
+#### Change to DHCP from static ip
+  
+sudo nmcli con modify <connection name> ipv4.method auto
+
+#### Set IP using GUI
+
+sudo nmtui
+
+
