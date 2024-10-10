@@ -1,0 +1,9 @@
+#### Apagar Histórico do Power Shell
+
+#### Apagar histórico da sessão atual
+
+Clear-History
+
+#### Apagar todo o histórico
+
+Remove-Item "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
