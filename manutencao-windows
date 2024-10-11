@@ -1,0 +1,9 @@
+### Manutenção do Windows
+
+sfc /scannow
+
+dism /online /cleanup-image /RestoreHealth
+
+dism /online /cleanup-image /AnalyzeComponentStore
+
+dism /online /cleanup-image /StartComponentCleanup /ResetBase
