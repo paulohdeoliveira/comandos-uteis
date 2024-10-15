@@ -1,0 +1,7 @@
+#### Verificar se Recall está ativado
+
+  dism /online /get-featureinfo /featurename:Recall
+
+#### Desativar Recall
+
+  dism /online /disable-feature /featurename:Recall
