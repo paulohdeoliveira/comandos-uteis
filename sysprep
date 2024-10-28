@@ -1,0 +1,10 @@
+WMIC useraccount get name,sid
+
+DISM /Get-WimInfo /WimFile:P:\sources\install.esd
+
+DISM /export-image /SourceImageFile:X:install.esd /SourceIndex:4 /DestinationImageFile:e:install.wim /Compress:max /Checkintegrity
+
+DISM /Capture-Image /ImageFile:e:\install.wim /CaptureDir:F: /Name:"Win10" /Compress:max /CheckIntegrity /verify
+
+oscdimg.exe -m -o -u2 -udfver102 -bootdata:2#p0,e,bX:\boot\etfsboot.com#pEF,e,bX:\efi\microsoft\boot\efisys.bin X:\ D:\Win10.iso
+
