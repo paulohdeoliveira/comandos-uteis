@@ -1,5 +1,7 @@
 ### Manutenção do Windows
 
+chkdsk /r
+
 sfc /scannow
 
 dism /online /cleanup-image /RestoreHealth
